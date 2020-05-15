@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/default_header_content"
+        android:layout_height="70dp"
+        android:layout_width="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/llPullToRefresh"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_downward_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="Pull to refresh" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/default_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- text -->
+
+            <TextView
+                android:id="@+id/default_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <!-- last update -->
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/default_header_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#999999"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_toLeftOf="@+id/default_image_view"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+
+            <!-- arrow -->
+
+            <ImageView
+                android:id="@+id/default_header_arrow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_downward_black_24dp" />
+
+            <!-- progressbar -->
+
+            <ProgressBar
+                android:id="@+id/default_header_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minHeight="28dp"
+                android:indeterminateDrawable="@drawable/ic_arrow_downward_black_24dp"
+                android:maxHeight="28dp"
+                android:maxWidth="28dp"
+                android:minWidth="28dp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
